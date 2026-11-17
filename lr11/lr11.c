@@ -49,7 +49,6 @@ int main() {
 		}
 	}
 
-	// если ничего не нашли
 	if (count == 0)
 		printf("Таких машин нет\n");
 
@@ -58,10 +57,8 @@ int main() {
 
 // проверяет прошло ли больше года с даты регистрации
 int moreThanYear(Date reg, Date today) {
-	// если разница в годах больше 1 то точно прошло
 	if (today.year - reg.year > 1)
 		return 1;
-	// если разница ровно 1 год то смотрим месяц и день
 	if (today.year - reg.year == 1) {
 		if (today.month > reg.month)
 			return 1;
@@ -71,7 +68,7 @@ int moreThanYear(Date reg, Date today) {
 	return 0;
 }
 
-// выводит сведения о машине
+
 void printTruck(Truck t) {
 	printf("Марка: %s\n", t.brand);
 	printf("Производитель: %s\n", t.maker);
